@@ -1,0 +1,16 @@
+{
+    "name": "unity-template-asset-management.runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b3ea357a2d66b5447b7dd318074b259e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

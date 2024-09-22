@@ -1,0 +1,18 @@
+{
+    "name": "unity-template-tilemap.runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b3ea357a2d66b5447b7dd318074b259e",
+        "GUID:26e3faa89a6ea474bb54719eb4561862",
+        "GUID:349cb86487af71448ac9b97991c26a1c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

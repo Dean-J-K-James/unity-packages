@@ -1,0 +1,10 @@
+{
+  "name": "com.pangean-flying-cactus.unity-template-entities",
+  "version": "1.0.0",
+  "displayName": "Unity Template Entities",
+  "description": "Provides reusable scripts and systems, such as for asset management, global variables, and an event system.",
+  "unity": "2023.2",
+  "dependencies": {
+    "com.pangean-flying-cactus.unity-template-event-system": "1.0.0"
+  }
+}
