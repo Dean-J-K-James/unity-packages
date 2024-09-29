@@ -2,6 +2,7 @@
     "name": "unity-template-asset-management.runtime",
     "rootNamespace": "",
     "references": [
+        "GUID:1a1ddaf2809419940b1241adc1f7edf5",
         "GUID:b3ea357a2d66b5447b7dd318074b259e"
     ],
     "includePlatforms": [],

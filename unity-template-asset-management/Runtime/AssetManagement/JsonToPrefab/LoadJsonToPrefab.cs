@@ -14,7 +14,8 @@ public class LoadJsonToPrefab : MonoBehaviour
 {
     Dictionary<string, GameObject> prefabMap = new Dictionary<string, GameObject>();
     Dictionary<string, string> prefabStringMap = new Dictionary<string, string>();
-    public RangeUI progress; //
+    //public RangeUI progress; //
+    public StringUI state; //
 
     /**
      * 
@@ -31,15 +32,15 @@ public class LoadJsonToPrefab : MonoBehaviour
         for (int i = 0; i < prefabs.Length; i++)
         {
             CreatePrefab(prefabs[i]);
-            //progress.Change(i + 1, 0, prefabs.Length);
-            yield return new WaitForSeconds(0.01f);
+            state.Change("Loading " + prefabs[i].name);
+			yield return new WaitForSeconds(0.01f);
         }
 
         for (int i = 0; i < entitys.Length; i++)
         {
             CreateEntity(entitys[i]);
-            //progress.Change(i + 1, 0, entitys.Length);
-            yield return new WaitForSeconds(0.01f);
+			state.Change("Loading " + entitys[i].name);
+			yield return new WaitForSeconds(0.01f);
         }
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("scn-game");
