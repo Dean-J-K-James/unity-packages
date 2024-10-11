@@ -3,14 +3,13 @@
 /******************************************************/
 
 using UnityEngine;
-using UnityEngine.U2D;
 
 /**
  * 
  */
 public class SpriteManager : Singleton<SpriteManager>
 {
-    public SpriteAtlas atlas; //
+    public SpriteAtlasResource atlas; //
 
     /**
 	 * 
@@ -21,11 +20,11 @@ public class SpriteManager : Singleton<SpriteManager>
 
         Sprite sprite;
 
-        if (sprite = atlas.GetSprite(em.slug + "." + em.type + "_" + em.variation)) { return sprite; } //Can replace this chain with a bunch of OR statements.
-        if (sprite = atlas.GetSprite(em.slug + "_" + em.variation)) { return sprite; }
-        if (sprite = atlas.GetSprite(em.slug + "." + em.type)) { return sprite; }
-        if (sprite = atlas.GetSprite(em.slug)) { return sprite; }
+        if (sprite = atlas.resource.GetSprite(em.slug + "." + em.type + "_" + em.variation)) { return sprite; }
+        if (sprite = atlas.resource.GetSprite(em.slug + "_" + em.variation)) { return sprite; }
+        if (sprite = atlas.resource.GetSprite(em.slug + "." + em.type)) { return sprite; }
+        if (sprite = atlas.resource.GetSprite(em.slug)) { return sprite; }
 
-        return atlas.GetSprite("untitled");
+        return atlas.resource.GetSprite("untitled");
     }
 }
