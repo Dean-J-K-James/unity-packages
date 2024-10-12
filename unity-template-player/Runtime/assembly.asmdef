@@ -1,9 +1,8 @@
 {
-    "name": "unity-template-world.runtime",
+    "name": "unity-template-player.runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:b3ea357a2d66b5447b7dd318074b259e",
-        "GUID:26e3faa89a6ea474bb54719eb4561862"
+        "GUID:b3ea357a2d66b5447b7dd318074b259e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
