@@ -5,19 +5,15 @@
 /**
  * 
  */
-public class NodeData : EntityData
+public class UnitData : EntityData
 {
-	public readonly Node node; //
-	public readonly int x; //
-	public readonly int y; //
+	public Unit entity; //
 
 	/**
 	 * 
 	 */
-	public NodeData(Node node, int x, int y) : base()
+	public UnitData(Unit u) : base()
 	{
-		this.node = node;
-		this.x = x;
-		this.y = y;
+		entity = u;
 	}
 }
