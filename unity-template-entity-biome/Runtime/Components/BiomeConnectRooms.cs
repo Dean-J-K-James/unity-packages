@@ -21,6 +21,18 @@ public class BiomeConnectRooms : MonoBehaviour, IComponent, ICreated<BiomeData>
 	{
 		void cb(int x, int y) { NodeManager.INSTANCE.Set(path, x, y); }
 
+		var cx = bd.x * Biome.SIZEX + Biome.SIZEX / 2;
+		var cy = bd.y * Biome.SIZEY + Biome.SIZEY / 2;
+
+		//var hx = Mathf.RoundToInt((float)Math.Round(Biome.SIZEX / 2f, MidpointRounding.AwayFromZero));
+		//var hy = Mathf.RoundToInt((float)Math.Round(Biome.SIZEY / 2f, MidpointRounding.AwayFromZero));
+
+        DrawLine.Run(cx, cy, cx, bd.y * Biome.SIZEY + Biome.SIZEY - 1, cb);
+        DrawLine.Run(cx, cy, bd.x * Biome.SIZEX + Biome.SIZEX - 1, cy, cb);
+        DrawLine.Run(cx, cy, cx, bd.y * Biome.SIZEY, cb);
+        DrawLine.Run(cx, cy, bd.x * Biome.SIZEX, cy, cb);
+
+        return;
 		for (int x = 0; x < room_count_x; x++)
 			for (int y = 0; y < room_count_y; y++)
 			{

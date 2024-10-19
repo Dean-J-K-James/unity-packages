@@ -10,10 +10,12 @@ public class EntitySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		var player = new UnitData(Asset.INSTANCE.Get<Unit>("player"));
+		//var player = new UnitData(Asset.INSTANCE.Get<Unit>("player"));
 		//Debug.Log(biomeData.entity);
 		//Debug.Log();
 		//Asset.INSTANCE.Get<Biome>(biome).InvokeMessage("OnWorldCreated", this);
-		player.entity.InvokeCreated(player);
+		//player.entity.InvokeCreated(player);
+
+		UnitManager.INSTANCE.Create("player.unit", 0, 0);
 	}
 }

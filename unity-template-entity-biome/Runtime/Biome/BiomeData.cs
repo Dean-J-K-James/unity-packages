@@ -7,13 +7,17 @@
  */
 public class BiomeData : EntityData
 {
-	public Biome entity; //
+	public readonly Biome entity; //
+    public readonly int x; //
+    public readonly int y; //
 
-	/**
+    /**
 	 * 
 	 */
-	public BiomeData(Biome b) : base()
+    public BiomeData(Biome b, int x, int y) : base()
 	{
 		entity = b;
-	}
+        this.x = x;
+        this.y = y;
+    }
 }

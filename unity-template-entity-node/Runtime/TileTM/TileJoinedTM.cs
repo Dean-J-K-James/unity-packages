@@ -9,13 +9,15 @@ using UnityEngine.Tilemaps;
 /**
  * 
  */
-public class TileJoinedTM : TileBase
+public class TileJoinedTM : TileBaseTM
 {
-	/**
+    /**
      * 
      */
-	public override void GetTileData(Vector3Int p, ITilemap t, ref TileData d)
+    public override void GetTileData(Vector3Int p, ITilemap t, ref TileData d)
     {
+        base.GetTileData(p, t, ref d);
+
         int mask = 0;
 
         var NN = t.GetTile(new Vector3Int(p.x + 0, p.y + 1)) == this;

@@ -20,6 +20,8 @@ public static class DrawLine
 		int y1 = Mathf.Min(sy, ey);
 		int y2 = Mathf.Max(sy, ey);
 
+		//Debug.Log("Drawing line between: (" + x1 + ", " + y1 + ") :: (" + x2 + ", " + y2 + ")");
+
 		for (int x = x1; x <= x2; x++)
 		{
 			for (int y = y1; y <= y2; y++)

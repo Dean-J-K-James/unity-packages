@@ -13,13 +13,14 @@ public static class RandomWalk
 	/**
 	 * 
 	 */
-	public static void Run(int sx, int sy, int range, int attempts, Action<int, int> cb)
+	public static void Run(int sx, int sy, int sizex, int sizey, int attempts, Action<int, int> cb)
 	{
-		int x = sx;
-		int y = sy;
+		int x = sx + sizex / 2;
+		int y = sy + sizey / 2;
 
 		for (int i = 0; i < attempts; i++)
 		{
+			Debug.Log("Setting random walk tile: " + x + " :: " + y);
 			cb(x, y);
 
 			switch (UnityEngine.Random.Range(0, 4))
@@ -30,8 +31,8 @@ public static class RandomWalk
 				case 3: { x++; break; }
 			}
 
-			x = Mathf.Clamp(x, sx - range, sx + range);
-			y = Mathf.Clamp(y, sy - range, sy + range);
+			x = Mathf.Clamp(x, sx, sx + sizex - 1);
+			y = Mathf.Clamp(y, sy, sy + sizey - 1);
 		}
 	}
 }

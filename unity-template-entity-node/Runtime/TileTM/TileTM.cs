@@ -8,10 +8,10 @@ using UnityEngine.Tilemaps;
 /**
  * 
  */
-public class TileTM : TileBase
+public class TileTM : TileBaseTM
 {
     /**
      * 
      */
-    public override void GetTileData(Vector3Int p, ITilemap t, ref TileData d) { d.sprite = SpriteManager.INSTANCE.Get(name); }
+    public override void GetTileData(Vector3Int p, ITilemap t, ref TileData d) { base.GetTileData(p, t, ref d); d.sprite = SpriteManager.INSTANCE.Get(name); }
 }

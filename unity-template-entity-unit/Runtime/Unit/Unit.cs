@@ -10,6 +10,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour, IComponent, ICreated<PrefData>
 {
     public int layerMask;
+    public UnitData unitData;
 
     public void OnCreated(PrefData pd)
     {

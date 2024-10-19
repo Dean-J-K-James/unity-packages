@@ -16,16 +16,9 @@ public class BiomeSurroundWithWalls : MonoBehaviour, IComponent, ICreated<BiomeD
      */
     public void OnCreated(BiomeData bd)
     {
-        var bounds = TilemapManager.INSTANCE.map.localBounds;
-
-        var minx = Mathf.RoundToInt(bounds.min.x) - 1;
-        var miny = Mathf.RoundToInt(bounds.min.y) - 1;
-        var maxx = Mathf.RoundToInt(bounds.max.x) + 1;
-        var maxy = Mathf.RoundToInt(bounds.max.y) + 1;
-
-        for (int x = minx; x < maxx; x++)
+        for (int x = bd.x * Biome.SIZEX; x < bd.x * Biome.SIZEX + Biome.SIZEX; x++)
         {
-            for (int y = miny; y < maxy; y++)
+            for (int y = bd.y * Biome.SIZEY; y < bd.y * Biome.SIZEY + Biome.SIZEY; y++)
             {
                 //if (NodeManager.INSTANCE.Get(x, y, 0) != null && NodeManager.INSTANCE.Get(x, y, 0).node.name == "grass.tile")
                 //{

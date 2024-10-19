@@ -14,6 +14,7 @@ public class TileFactory : MonoBehaviour, IComponent, ICreated<PrefData>
     public TileBase tile;        //
     public string   tileType;    //
 	public int      randomCount; //
+	public bool     collision;   //
 	
     /**
      * 

@@ -8,12 +8,12 @@ using UnityEngine.Tilemaps;
 /**
  * 
  */
-public class TileRandomTM : TileBaseTM
+public class TileBaseTM : TileBase
 {
-    public int randomCount; //
+    public bool collision; //
 
     /**
      * 
      */
-    public override void GetTileData(Vector3Int p, ITilemap t, ref TileData d) { base.GetTileData(p, t, ref d); d.sprite = SpriteManager.INSTANCE.Get(name + "_" + Random.Range(0, randomCount)); }
+    public override void GetTileData(Vector3Int p, ITilemap t, ref TileData d) { d.colliderType = collision ? Tile.ColliderType.Grid : Tile.ColliderType.None; }
 }

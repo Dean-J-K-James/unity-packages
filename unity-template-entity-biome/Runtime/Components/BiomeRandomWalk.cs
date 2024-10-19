@@ -18,10 +18,7 @@ public class BiomeRandomWalk : MonoBehaviour, IComponent, ICreated<BiomeData>
      */
 	public void OnCreated(BiomeData bd)
 	{
-		for (int x = 0; x < room_count_x; x++)
-			for (int y = 0; y < room_count_y; y++)
-			{
-				RandomWalk.Run(x * 16, y * 16, 8, 500, (x, y) => { NodeManager.INSTANCE.Set(path, x, y); });
-			}
-	}
+		Debug.Log("Doing random walk for: " + bd.x + " :: " + bd.y);
+        RandomWalk.Run(bd.x * Biome.SIZEX, bd.y * Biome.SIZEY, Biome.SIZEX, Biome.SIZEY, 500, (x, y) => { NodeManager.INSTANCE.Set(path, x, y); });
+    }
 }
