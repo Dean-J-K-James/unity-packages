@@ -7,18 +7,16 @@ using UnityEngine;
 /**
  * 
  */
-public class BiomeSurroundWithWalls : MonoBehaviour, IComponent, ICreated<BiomeData>
+public class ChunkFillWalls : MonoBehaviour, IComponent, ICreated<ChunkData>
 {
-    public string wall; //
-
     /**
      * 
      */
-    public void OnCreated(BiomeData bd)
+    public void OnCreated(ChunkData cd)
     {
-        for (int x = bd.x * Biome.SIZEX; x < bd.x * Biome.SIZEX + Biome.SIZEX; x++)
+        for (int x = cd.x * Biome.SIZEX; x < cd.x * Biome.SIZEX + Biome.SIZEX; x++)
         {
-            for (int y = bd.y * Biome.SIZEY; y < bd.y * Biome.SIZEY + Biome.SIZEY; y++)
+            for (int y = cd.y * Biome.SIZEY; y < cd.y * Biome.SIZEY + Biome.SIZEY; y++)
             {
                 //if (NodeManager.INSTANCE.Get(x, y, 0) != null && NodeManager.INSTANCE.Get(x, y, 0).node.name == "grass.tile")
                 //{
@@ -27,7 +25,7 @@ public class BiomeSurroundWithWalls : MonoBehaviour, IComponent, ICreated<BiomeD
 
                 if (NodeManager.INSTANCE.Get(x, y, 0) == null)
                 {
-                    NodeManager.INSTANCE.Set(wall, x, y);
+                    NodeManager.INSTANCE.Set(cd.biome.wall, x, y);
                 }
             }
         }

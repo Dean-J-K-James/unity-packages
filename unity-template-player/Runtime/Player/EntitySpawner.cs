@@ -16,6 +16,5 @@ public class EntitySpawner : MonoBehaviour
 		//Asset.INSTANCE.Get<Biome>(biome).InvokeMessage("OnWorldCreated", this);
 		//player.entity.InvokeCreated(player);
 
-		UnitManager.INSTANCE.Create("player.unit", 0, 0);
 	}
 }

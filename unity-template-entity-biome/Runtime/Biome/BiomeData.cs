@@ -7,17 +7,13 @@
  */
 public class BiomeData : EntityData
 {
-	public readonly Biome entity; //
-    public readonly int x; //
-    public readonly int y; //
+	public readonly Biome biome; //is this really needed? it can already be used by using GetComponent<Biome>()...
 
     /**
 	 * 
 	 */
-    public BiomeData(Biome b, int x, int y) : base()
+    public BiomeData(Biome b) : base()
 	{
-		entity = b;
-        this.x = x;
-        this.y = y;
+        biome = b;
     }
 }

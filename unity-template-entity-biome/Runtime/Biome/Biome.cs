@@ -10,6 +10,8 @@ using UnityEngine;
  */
 public class Biome : MonoBehaviour, IComponent
 {
+    public string path; //
+    public string wall; //
     public const int SIZEX = 15;
     public const int SIZEY = 15;
     public float scale; //
