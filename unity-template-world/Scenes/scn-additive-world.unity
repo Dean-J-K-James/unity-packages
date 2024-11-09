@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 570366073}
   - component: {fileID: 570366076}
   - component: {fileID: 570366075}
+  - component: {fileID: 570366077}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -211,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d5af260c127bf4ba1d41d540ef07b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tick: 1
   biome: dungeon.biome
   seed: 0
   sizex: 0
@@ -252,6 +254,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03bb78a74f6604a4aa14e1cf0eba9dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &570366077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570366071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d232ef63498fb0e498f864b01ddbc3b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: 0
+  enemiesToSpawn: 0
 --- !u!1 &1366843004
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +280,7 @@ GameObject:
   - component: {fileID: 1366843007}
   - component: {fileID: 1366843006}
   - component: {fileID: 1366843008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: layer - tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

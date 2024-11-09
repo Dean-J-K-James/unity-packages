@@ -7,12 +7,12 @@ using UnityEngine;
 /**
  * 
  */
-public class CameraFollow : MonoBehaviour, IComponent, IUpdated<UnitData>
+public class CameraFollow : MonoBehaviour, IComponent, IUpdated
 {
     /**
      * 
      */
-    public void OnUpdated(UnitData ud)
+    public void OnUpdated()
     {
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
     }

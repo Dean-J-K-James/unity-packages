@@ -18,7 +18,7 @@ public class BiomeSpawnPlayer : MonoBehaviour, IComponent, ICreated<BiomeData>
      */
     public void OnCreated(BiomeData bd)
     {
-        while (true)
+        while (true) //Maybe make this as a generic function, like DrawLine: FindTileWithAttributes().
         {
             var x = Random.Range(0, chunks_x * Biome.SIZEX);
             var y = Random.Range(0, chunks_y * Biome.SIZEY);

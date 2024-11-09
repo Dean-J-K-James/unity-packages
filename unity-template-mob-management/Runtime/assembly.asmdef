@@ -1,0 +1,20 @@
+{
+    "name": "unity-template-mob-management.runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b3ea357a2d66b5447b7dd318074b259e",
+        "GUID:26e3faa89a6ea474bb54719eb4561862",
+        "GUID:b7d0de2026a5c6a4bbabc448ded7ba9c",
+        "GUID:94bde20a9e04d0d44905b3b685212ddc",
+        "GUID:3609f020fd34e0244820c227a7fd4e2a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

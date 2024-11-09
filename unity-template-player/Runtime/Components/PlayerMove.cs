@@ -8,14 +8,14 @@ using UnityEngine;
 /**
  * 
  */
-public class PlayerMove : MonoBehaviour, IComponent, IUpdated<UnitData>
+public class PlayerMove : MonoBehaviour, IComponent, IUpdated
 {
     public float movementSpeed; //
 
     /**
      * 
      */
-    public void OnUpdated(UnitData ud)
+    public void OnUpdated()
     {
         Vector2 movement = Vector2.zero;
 

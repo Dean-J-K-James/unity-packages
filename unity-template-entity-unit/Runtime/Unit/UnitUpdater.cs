@@ -17,7 +17,7 @@ public class UnitUpdater : MonoBehaviour
 
         foreach (var u in us)
         {
-            u.InvokeUpdated(u.unitData);
+            u.InvokeUpdated();
         }
     }
 }
