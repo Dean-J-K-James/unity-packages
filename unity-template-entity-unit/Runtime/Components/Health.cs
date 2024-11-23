@@ -15,6 +15,8 @@ public class Health : MonoBehaviour, IComponent, ICreated<PrefData>
         this.InvokeChanged();
     }
 
+    //remove the need for this by having health be the inverse. 0 is full health, and maxHealth is death.
+    //have max health loaded from JSON and health be a public property.
     public void OnCreated(PrefData pd)
     {
         maxHealth = health;

@@ -16,12 +16,19 @@ public class TargetClosestEnemy : MonoBehaviour, IComponent, IUseItem
      */
     public void OnUseItem(Unit source) //Will have to pass the Unit doing the firing to get it's position.
     {
+        //Debug.Log("OnUseItem");
+
         var enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
 
         if (enemies.Length == 0)
         {
             return;
         }
+
+        //The below can be a utility script, similar to DrawLine.
+        //Pass a comparison that returns a weighted integer for priority.
+        //Closer enemy, higher priority.
+        //Other script will do higher priority for enemy health.
 
         Enemy closest = null;
         float closestDistance = Mathf.Infinity;
@@ -39,6 +46,7 @@ public class TargetClosestEnemy : MonoBehaviour, IComponent, IUseItem
 
         if (closest != null && closestDistance <= range)
         {
+            //Debug.Log("Firing Weapon");
             this.InvokeFireWpn(source, closest.GetComponent<Unit>());
         }
     }

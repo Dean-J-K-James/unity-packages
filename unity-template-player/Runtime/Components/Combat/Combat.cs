@@ -26,7 +26,7 @@ public class Combat : MonoBehaviour, IComponent, ICreated<PrefData>, IUpdated
         {
             cooldown = weapon.cooldown;
 
-            weapon.InvokeUseItem();
+            weapon.InvokeUseItem(GetComponent<Unit>());
         }
     }
 }
