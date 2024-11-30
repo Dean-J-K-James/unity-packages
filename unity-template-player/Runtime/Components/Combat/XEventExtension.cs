@@ -7,7 +7,7 @@ using UnityEngine;
 /**
  * 
  */
-public static class XItemEventExtensions
+public static class XItemEventExtensions //Surely this should be in an item package rather than the player package???
 {
     //
     public static void InvokeUseItem(this MonoBehaviour go, Unit s)         { foreach (var item in go.GetComponents<IUseItem>()) { item.OnUseItem(s);    } }

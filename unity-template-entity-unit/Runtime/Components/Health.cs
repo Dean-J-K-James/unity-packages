@@ -9,7 +9,17 @@ public class Health : MonoBehaviour, IComponent, ICreated<PrefData>
 
     public void ChangeHealth(float change)
     {
-        health += change;
+        health = Mathf.Clamp(health + change, 0, maxHealth);
+
+        //Clamp health to maxHealth.
+
+        if (health <= 0)
+        {
+            //This unit needs to be destroyed.
+            this.InvokeUnitDie();
+        }
+
+
         //Trigger local OnChanged event.
         //Player listens to this to trigger the global OnChanged.
         this.InvokeChanged();
