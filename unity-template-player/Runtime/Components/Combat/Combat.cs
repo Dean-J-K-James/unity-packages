@@ -15,6 +15,7 @@ public class Combat : MonoBehaviour, IComponent, ICreated<PrefData>, IUpdated
 
     public void OnCreated(PrefData pd)
     {
+        Debug.Log("Combat OnCreated");
         weapon = Asset.INSTANCE.Get<Weapon>(defaultWeapon);
     }
 

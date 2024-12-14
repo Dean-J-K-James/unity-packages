@@ -7,10 +7,10 @@ using UnityEngine;
 /**
  * 
  */
-public class ResourceAsset<T> : MonoBehaviour where T : Object
+public abstract class ResourceAsset<T> : MonoBehaviour where T : Object
 {
-    [HideInInspector] public T      resource; //
-                      public string path;     //
+    public T      resource { get; private set; } //
+    public string path;                          //
 
     /**
 	 * 

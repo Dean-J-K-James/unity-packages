@@ -25,7 +25,7 @@ public class BiomeSpawnPlayer : MonoBehaviour, IComponent, ICreated<BiomeData>
 
             if (NodeManager.INSTANCE.Get(x, y, 0).node.name == path)
             {
-                UnitManager.INSTANCE.Create("player.unit", x, y);
+                UnitManager.INSTANCE.Create("player", x, y);
                 return;
             }
         }

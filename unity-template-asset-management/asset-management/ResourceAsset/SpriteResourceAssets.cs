@@ -2,9 +2,9 @@
 /* Dean James * Pangean Flying Cactus * Unity Project */
 /******************************************************/
 
-using UnityEngine.U2D;
+using UnityEngine;
 
 /**
  * 
  */
-public class SpriteAtlasResource : ResourceAsset<SpriteAtlas> { }
+public class SpriteResourceAssets : ResourceAssets<Sprite> { }

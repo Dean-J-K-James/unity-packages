@@ -32,7 +32,7 @@ public class BiomeSpawnEnemies : MonoBehaviour, IComponent, ITickerd<BiomeData>
             var newx = Player.INSTANCE.transform.position.x + (10f * Mathf.Cos(angle));
             var newy = Player.INSTANCE.transform.position.y + (10f * Mathf.Sin(angle));
 
-            UnitManager.INSTANCE.Create("zombie.unit", newx, newy);
+            UnitManager.INSTANCE.Create("zombie", newx, newy);
 
             WaveManager.INSTANCE.enemiesToSpawn--;
 

@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tick: 1
-  biome: dungeon.biome
+  biome: dungeon
   seed: 0
   sizex: 0
   sizey: 0
