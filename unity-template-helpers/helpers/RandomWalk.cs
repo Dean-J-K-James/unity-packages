@@ -1,6 +1,6 @@
-/*******************************************************/
-/* Dean James * Pangean Flying Cactus * Custom Package */
-/*******************************************************/
+/******************************************************/
+/* Dean James * Pangean Flying Cactus * Unity Project */
+/******************************************************/
 
 using System;
 using UnityEngine;
@@ -20,7 +20,6 @@ public static class RandomWalk
 
 		for (int i = 0; i < attempts; i++)
 		{
-			Debug.Log("Setting random walk tile: " + x + " :: " + y);
 			cb(x, y);
 
 			switch (UnityEngine.Random.Range(0, 4))

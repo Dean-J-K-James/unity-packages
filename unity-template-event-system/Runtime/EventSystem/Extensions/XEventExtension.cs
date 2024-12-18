@@ -16,6 +16,8 @@ public static class XEventExtensions
     public static void InvokeTickerd<T>(this MonoBehaviour go, T param) { foreach (var item in go.GetComponents<ITickerd<T>>()) { item.OnTickerd(param); } }
     public static void InvokeDeleted<T>(this MonoBehaviour go, T param) { foreach (var item in go.GetComponents<IDeleted<T>>()) { item.OnDeleted(param); } }
     public static void InvokeTrigger<T>(this MonoBehaviour go, T param) { foreach (var item in go.GetComponents<ITrigger<T>>()) { item.OnTrigger(param); } }
+    public static void Invoke<T>(this MonoBehaviour go) where T : IEvent { foreach (var item in go.GetComponents<T>()) { item.OnEvent(); } }
+    public static void Invoke<T, Y>(this MonoBehaviour go, Y param) where T : IEvent<Y> { foreach (var item in go.GetComponents<T>()) { item.OnEvent(param); } }
 
     //
     public static void InvokeCreated(this MonoBehaviour go) { foreach (var item in go.GetComponents<ICreated>()) { item.OnCreated(); } }

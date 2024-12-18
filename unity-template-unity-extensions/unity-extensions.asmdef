@@ -1,9 +1,7 @@
 {
-    "name": "asset-management",
+    "name": "unity-extensions",
     "rootNamespace": "",
-    "references": [
-        "GUID:b3ea357a2d66b5447b7dd318074b259e"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveUI : SingletonListener, IChanged<Game>
+public class WaveUI : MonoBehaviour, IChanged<Game>
 {
     public StringUI wave; //
     public StringUI enemiesRemaining; //

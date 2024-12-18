@@ -1,10 +1,10 @@
-/*******************************************************/
-/* Dean James * Pangean Flying Cactus * Custom Package */
-/*******************************************************/
+/******************************************************/
+/* Dean James * Pangean Flying Cactus * Unity Project */
+/******************************************************/
 
 using UnityEngine;
 
 /**
  * 
  */
-public class SingletonListener : MonoBehaviour { }
+public sealed class SingletonListener : MonoBehaviour { }

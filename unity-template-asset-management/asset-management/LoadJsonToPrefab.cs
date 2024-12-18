@@ -2,6 +2,7 @@
 /* Dean James * Pangean Flying Cactus * Unity Project */
 /******************************************************/
 
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ using UnityEngine;
  */
 public class LoadJsonToPrefab : MonoBehaviour
 {
-    public StringUI state; //
+    public StringUI   state;         //
     public GameObject defaultPrefab; //
 
     /**
@@ -21,7 +22,7 @@ public class LoadJsonToPrefab : MonoBehaviour
         foreach (var prefab in Resources.LoadAll<TextAsset>("Entity/"))
         {
             CreateTemplate(prefab);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.05f);
         }
 
         DeletePrefabs();
@@ -127,7 +128,7 @@ public class LoadJsonToPrefab : MonoBehaviour
         if (components != null)
             foreach (var c in components)
             {
-                go.AddComponent(TypeManager.GetType(c.ToString()));
+                AddComponentFromType(go, c.ToString());
             }
     }
 
@@ -141,4 +142,22 @@ public class LoadJsonToPrefab : MonoBehaviour
             JsonUtility.FromJsonOverwrite(json, c);
         }
     }
+
+    /**
+     * 
+     */
+    public void AddComponentFromType(GameObject go, string type)
+    {
+        foreach (var item in AppDomain.CurrentDomain.GetAssemblies())
+        {
+            Type t = Type.GetType(type + ", " + item.FullName);
+
+            if (t != null)
+            {
+                go.AddComponent(t);
+                return;
+            }
+        }
+    }
+
 }

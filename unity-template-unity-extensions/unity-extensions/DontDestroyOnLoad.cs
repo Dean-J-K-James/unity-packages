@@ -2,13 +2,15 @@
 /* Dean James * Pangean Flying Cactus * Unity Project */
 /******************************************************/
 
+using UnityEngine;
+
 /**
  * 
  */
-
-[System.Serializable]
-struct JsonObject
+public class DontDestroyOnLoad : MonoBehaviour
 {
-    public string   name;       //
-    public string[] components; //
+    /**
+     * 
+     */
+    void Awake() => DontDestroyOnLoad(gameObject);
 }

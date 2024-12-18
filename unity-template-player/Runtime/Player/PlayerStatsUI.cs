@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStatsUI : SingletonListener, IChanged<Player>
+public class PlayerStatsUI : MonoBehaviour, IChanged<Player>
 {
     public StringUI health; //
     public StringUI xp; //
