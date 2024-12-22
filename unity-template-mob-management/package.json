@@ -1,7 +1,0 @@
-{
-  "name": "com.pangean-flying-cactus.unity-template-mob-management",
-  "version": "1.0.0",
-  "displayName": "Unity Template Event System",
-  "description": "Provides reusable scripts and systems, such as for asset management, global variables, and an event system.",
-  "unity": "2023.2"
-}

@@ -10,11 +10,11 @@ using UnityEngine.UI;
  */
 public class RandomImageSelector : MonoBehaviour
 {
-    public SpriteResourceAssets sprites; //
-    public Image                image;   //
+    public Image    image;   //
+    public Sprite[] sprites; //
 
     /**
 	 * 
 	 */
-    void Start() { image.sprite = sprites.resource[Random.Range(0, sprites.resource.Length)]; }
+    void Start() { image.sprite = sprites[Random.Range(0, sprites.Length)]; }
 }

@@ -2,7 +2,9 @@
     "name": "asset-management",
     "rootNamespace": "",
     "references": [
-        "GUID:b3ea357a2d66b5447b7dd318074b259e"
+        "GUID:b3ea357a2d66b5447b7dd318074b259e",
+        "GUID:72a1a81177f6ab849bc958886c975147",
+        "GUID:1a1ddaf2809419940b1241adc1f7edf5"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

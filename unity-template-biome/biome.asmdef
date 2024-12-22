@@ -1,12 +1,13 @@
 {
-    "name": "unity-template-player.runtime",
+    "name": "biome",
     "rootNamespace": "",
     "references": [
         "GUID:b3ea357a2d66b5447b7dd318074b259e",
-        "GUID:94bde20a9e04d0d44905b3b685212ddc",
+        "GUID:752489a0bfb7a5c4789e63f5e9e0edbe",
         "GUID:26e3faa89a6ea474bb54719eb4561862",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:72a1a81177f6ab849bc958886c975147"
+        "GUID:1a1ddaf2809419940b1241adc1f7edf5",
+        "GUID:d813c16f0fe6bb247b03680f91bd18e6",
+        "GUID:94bde20a9e04d0d44905b3b685212ddc"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

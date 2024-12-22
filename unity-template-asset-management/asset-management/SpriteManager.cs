@@ -3,17 +3,17 @@
 /******************************************************/
 
 using UnityEngine;
+using UnityEngine.U2D;
 
 /**
  * 
  */
 public class SpriteManager : Singleton<SpriteManager>
 {
-    public SpriteAtlasResourceAsset atlas;    //
-    public Sprite                   untitled; //
+    public SpriteAtlas atlas;    //
 
     /**
 	 * 
 	 */
-    public Sprite Get(string k) { Sprite sprite = atlas.resource.GetSprite(k); return sprite != null ? sprite : untitled; }
+    public Sprite Get(string k) { Sprite sprite = atlas.GetSprite(k); return sprite != null ? sprite : atlas.GetSprite("untitled"); }
 }

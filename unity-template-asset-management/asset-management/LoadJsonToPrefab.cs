@@ -148,16 +148,11 @@ public class LoadJsonToPrefab : MonoBehaviour
      */
     public void AddComponentFromType(GameObject go, string type)
     {
-        foreach (var item in AppDomain.CurrentDomain.GetAssemblies())
-        {
-            Type t = Type.GetType(type + ", " + item.FullName);
+        var t = TypeFromString.Get(type);
 
-            if (t != null)
-            {
-                go.AddComponent(t);
-                return;
-            }
+        if (t != null)
+        {
+            go.AddComponent(t);
         }
     }
-
 }

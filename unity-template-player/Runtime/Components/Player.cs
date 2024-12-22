@@ -12,7 +12,7 @@ public class Player : Singleton<Player>, IChanged
         this.InvokeChanged();
     }
 
-    public void OnChanged()
+    public void OnChanged() //Have a seperate LocalToGlobalChanged component for this to make it more generic.
     {
         this.GlobalChanged(this);
     }
