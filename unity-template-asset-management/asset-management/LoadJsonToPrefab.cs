@@ -31,7 +31,7 @@ public class LoadJsonToPrefab : MonoBehaviour
         yield return null;
         InvokePrefabs();
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("scn-game");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("scn-menu");
     }
 
     /**

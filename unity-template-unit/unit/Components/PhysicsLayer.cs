@@ -14,5 +14,5 @@ public class PhysicsLayer : MonoBehaviour, IComponent, ICreated<PrefData>
     /**
      * 
      */
-    public void OnCreated(PrefData pd) => gameObject.layer = LayerMask.NameToLayer(physicsLayer);
+    public void OnCreated(PrefData pd) { gameObject.layer = LayerMask.NameToLayer(physicsLayer); gameObject.tag = physicsLayer; }
 }

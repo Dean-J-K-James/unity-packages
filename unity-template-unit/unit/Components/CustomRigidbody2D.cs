@@ -9,14 +9,17 @@ using UnityEngine;
  */
 public class CustomRigidbody2D : MonoBehaviour, IComponent, ICreated<PrefData>
 {
-    /**
+	public bool trigger; //
+
+	/**
      * 
      */
-    public void OnCreated(PrefData pd)
-    {
-        gameObject.AddComponent<Rigidbody2D>().gravityScale = 0;
-        gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+	public void OnCreated(PrefData pd)
+	{
+		gameObject.AddComponent<Rigidbody2D>().gravityScale = 0;
+		gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
-        gameObject.AddComponent<CircleCollider2D>().radius = 0.4f;
-    }
+		gameObject.AddComponent<CircleCollider2D>().radius = 0.4f;
+		gameObject.GetComponent<CircleCollider2D>().isTrigger = trigger;
+	}
 }
